@@ -9,16 +9,17 @@ export default class AddNumber extends Component {
         <input
           type="button"
           value="+"
-          onClick={function () {
+          onClick={() => {
             this.props.onClick(this.state.size);
-          }.bind(this)}
+          }}
         />
+
         <input
           type="text"
           value={this.state.size}
-          onChange={function (e) {
+          onChange={(e) => {
             this.setState({ size: Number(e.target.value) });
-          }.bind(this)}
+          }}
         />
       </div>
     );
